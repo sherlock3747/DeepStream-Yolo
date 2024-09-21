@@ -12,12 +12,25 @@ gpu-id=0
 nvbuf-memory-type=0
 
 [source0]
-enable=1
+enable=0
 type=3
 uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
 num-sources=1
 gpu-id=0
 cudadec-memtype=0
+
+[source1]
+enable=1
+type=1
+camera-width=640
+camera-height=480
+camera-fps-n=30
+camera-fps-d=1
+num-sources=1
+gpu-id=0
+cudadec-memtype=0
+
+
 
 [sink0]
 enable=1
@@ -56,7 +69,7 @@ enable=1
 gpu-id=0
 gie-unique-id=1
 nvbuf-memory-type=0
-config-file=config_infer_primary.txt
+config-file=config_infer_primary_yoloV8.txt
 
 [tests]
 file-loop=0
